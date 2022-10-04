@@ -821,16 +821,7 @@ function! s:GuessFileType() abort
     endif
 
     if ext == 'py'
-        let python_version = input('Which Python [2/3]: ', '3')
-        redraw
-        if python_version ==# '2'
-            return 'python'
-        elseif python_version ==# '3'
-            return 'python3'
-        else
-            echo 'unrecognized answer, default to Python3'
-            return 'python3'
-        endif
+        return "python3"
     endif
 
     return ''
